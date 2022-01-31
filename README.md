@@ -45,4 +45,4 @@ Now it is Possible to generate new character stats using the -randchar command
 
 ### Version (0.1.4)
 
-Added the ability to roll Fate Core dice with `+ = +1` `- = -1` and the empty side is represented as a 0 the syntax is -r fc +mod  ex:`-r fc +3`
+Added the ability to roll Fate Core dice with `+ = +1` `- = -1` and the empty side is represented as a 0 the syntax is -r fc +mod  ex:`-r fc +3` output ex:`-1, -1, +1, 0, +3`
