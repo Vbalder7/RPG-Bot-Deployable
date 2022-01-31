@@ -28,6 +28,8 @@ Added some admin commands for shutdown functionality.
 Added dice rolling capability
 we use [d20](https://pypi.org/project/d20/) for our dice rolling.
 
+## Operators
+
 | Syntax | Name | Description |
 |---|---|---|
 | k | keep | Keeps all matched values. |
@@ -38,6 +40,51 @@ we use [d20](https://pypi.org/project/d20/) for our dice rolling.
 | e | explode on | Rolls another die for each matched value. (Dice only) |
 | mi | minimum | Sets the minimum value of each die. (Dice only) |
 | ma | maximum | Sets the maximum value of each die. (Dice only) |
+
+## Selectors
+
+| Syntax | Name | Description |
+|---|---|---|
+| X | literal | All values in this set that are literally this value. |
+| hX | highest X | The highest X values in the set. |
+| lX | lowest X | The lowest X values in the set. |
+| >X | greater than X | All values in this set greater than X. |
+| <X | less than X | All values in this set less than X. |
+
+## Unary Operations
+
+| Syntax | Name | Description |
+|---|---|---|
+| +X | positive | Does nothing. |
+| -X | negative | The negative value of X. |
+
+## Examples
+
+```python
+>>> r = roll("4d6kh3")  # highest 3 of 4 6-sided dice
+>>> r.total
+14
+>>> str(r)
+'4d6kh3 (4, 4, **6**, ~~3~~) = `14`'
+
+>>> r = roll("2d6ro<3")  # roll 2d6s, then reroll any 1s or 2s once
+>>> r.total
+9
+>>> str(r)
+'2d6ro<3 (**~~1~~**, 3, **6**) = `9`'
+
+>>> r = roll("8d6mi2")  # roll 8d6s, with each die having a minimum roll of 2
+>>> r.total
+33
+>>> str(r)
+'8d6mi2 (1 -> 2, **6**, 4, 2, **6**, 2, 5, **6**) = `33`'
+
+>>> r = roll("(1d4 + 1, 3, 2d6kl1)kh1")  # the highest of 1d4+1, 3, and the lower of 2 d6s
+>>> r.total
+3
+>>> str(r)
+'(1d4 (2) + 1, ~~3~~, ~~2d6kl1 (2, 5)~~)kh1 = `3`'
+```
 
 ### Version (0.1.3)
 
