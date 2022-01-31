@@ -11,7 +11,7 @@ with open('secrets/token','r',encoding='utf-8') as f:
     token = f.read().strip()
     
 bot = lb.BotApp(token = token,
-                prefix='$',
+                prefix='-',
                 )
 
 scheduler = AsyncIOScheduler()
@@ -47,7 +47,7 @@ async def on_stopping(event: hikari.StoppingEvent) -> None:
 
 
 bot.run(activity=hikari.Activity(
-            name=f"RPG Bot | Version = {__version__}",
+            name=f"RPG Bot | Version = {__version__} | Prefix \"-\"",
             type=hikari.ActivityType.WATCHING,
         )
     )
