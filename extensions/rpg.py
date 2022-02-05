@@ -1,9 +1,6 @@
-from hikari import Guild
-import lightbulb
-import d20
-import random
-import json
+import lightbulb,d20,random,json
 from functions import tital
+from hikari import Guild
 
 plugin = lightbulb.Plugin('RPG')
 
@@ -52,7 +49,41 @@ async def cmd_randchar(ctx) -> None:
         stats.append(charstat)
     await ctx.respond(f"These are your new stats {stats}", reply=True, mentions_reply=True)
 
+@plugin.command
+@lightbulb.add_checks(lightbulb.guild_only)
+@lightbulb.option('op5','',default='')
+@lightbulb.option('op4','',default='')
+@lightbulb.option('op3','',default='')
+@lightbulb.option('op2','',default='')
+@lightbulb.option('op1','',default='')
+@lightbulb.command('spell', 'Finds spell info')
+@lightbulb.implements(lightbulb.PrefixCommand)
+async def spell_lookup(ctx) -> None:
+    op1,op2,op3,op4,op5 = [ctx.options.op1,
+                           ctx.options.op2,
+                           ctx.options.op3,
+                           ctx.options.op4,
+                           ctx.options.op5]
+    with open('resources/json/spells.json', 'r') as f:
+        info = json.load(f)
+    spellName = (f'{op1} {op2} {op3} {op4} {op5}')
+    spellName = spellName.strip()
+    spellName = tital.titalize(spellName)
+    for spell in info['spells']:
+        if spell['name'] == spellName:
+            spellBlock = (f"""\n
+`Spell Name`: **{spell['name']}**
+`Source Book`: __***{spell['source']}***__
+`Base Level`: *{spell['level']}*
+`Spell Description`: *{spell['desc']}*
+`Range`: __***{spell['range']}***__
+`Casting Time`: __***{spell['casting_time']}***__
+`Duration`: __***{spell['duration']}***__
+`School`: {spell['school']}
+`Spell Classes`: *{spell['class']}*
 
+""")
+            await ctx.respond(spellBlock)
 
 def load(bot: lightbulb.BotApp) -> None:
         bot.add_plugin(plugin)
