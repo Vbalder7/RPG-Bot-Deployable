@@ -68,7 +68,12 @@ async def spell_lookup(ctx) -> None:
         info = json.load(f)
     spellName = (f'{op1} {op2} {op3} {op4} {op5}')
     spellName = spellName.strip()
-    spellName = tital.titalize(spellName)
+    if spellName.count(' ') > 0:
+        spellName = tital.titalize(spellName)
+    else:
+        spellName = spellName.title()
+    
+    
     for spell in info['spells']:
         if spell['name'] == spellName:
             spellBlock = (f"""\n
