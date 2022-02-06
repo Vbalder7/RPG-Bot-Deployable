@@ -40,6 +40,7 @@ with open('secrets/token','r',encoding='utf-8') as f:
     
 bot = lb.BotApp(token = token,
                 prefix='-',
+                case_insensitive_prefix_commands=True
                 )
 
 scheduler = AsyncIOScheduler()
