@@ -31,7 +31,8 @@ decided to make it Easier."""
         .set_thumbnail(me.avatar_url)
         .set_author(name="Information")
         .set_footer(f"Requested by {member.display_name}", icon=member.avatar_url)
-        .add_field("Authors",(f"<@{guild.get_member(OWNER_ID)}>"))
+        .add_field("Source Code","<https://github.com/Vbalder7/RPG-Bot>")
+        .add_field("Authors",(f"<@{554078653726588930}>"))
     )
 
 @info_group.child
