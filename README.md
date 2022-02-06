@@ -1,6 +1,10 @@
 
 # RPG Bot
 
+<p align="center">
+    <img src="resources/pictures/logo (1).png" alt="Image" width="200" height="200" />
+</p>
+
 We are dedicated to making a discord bot
 that is used for any TTRPG (Table Top Role Playing Game),
 and since we are all facing these troubling times we might find 
