@@ -7,16 +7,16 @@
 
 We are dedicated to making a discord bot
 that is used for any TTRPG (Table Top Role Playing Game),
-and since we are all facing these troubling times we might find 
-ourselves playing these games online. So we 
+and since we are all facing these troubling times we might find
+ourselves playing these games online. So we
 decided to make it Easier.
 
-
-
-
 ## Current Version
-RPG Bot Is Currently In Version (0.1.3), as of 
-Friday, January 28, 2022.## Changelog
+
+RPG Bot Is Currently In Version (0.1.3), as of
+Friday, January 28, 2022.
+
+## Changelog
 
 ### Version (0.1.0)
 
@@ -102,6 +102,7 @@ Added the ability to roll Fate Core dice with `+ = +1` `- = -1` and the empty si
 
 Added spell lookup command, but the file containing all the spell data is not complete
 so you will get a lot of filler text
+
 ## Deployment
 
 To deploy this project run
@@ -113,4 +114,3 @@ I suggest using heroku as the Procfile,requirements.txt, and runtime.txt are pro
 You need only make a private repository on GitHub add all files to the repository and then build the app with heroku.
 once that is done you can go to the resources tab on the heroku dashboard and refresh the page.
 then turn on the choice that says bot.py
-
