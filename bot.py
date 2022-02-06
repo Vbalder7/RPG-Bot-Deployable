@@ -75,7 +75,7 @@ async def on_stopping(event: hikari.StoppingEvent) -> None:
 
 
 bot.run(activity=hikari.Activity(
-            name=f"RPG Bot|Version = {__version__}|Prefix \"-\"",
+            name=f"-help|Version={__version__}",
             type=hikari.ActivityType.WATCHING,
         )
     )
