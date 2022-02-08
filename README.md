@@ -103,6 +103,10 @@ Added the ability to roll Fate Core dice with `+ = +1` `- = -1` and the empty si
 Added spell lookup command, but the file containing all the spell data is not complete
 so you will get a lot of filler text
 
+## Version (0.1.5)
+
+Finished spell lookup command, but only works with srd spells for now.
+
 ## Deployment
 
 To deploy this project run
