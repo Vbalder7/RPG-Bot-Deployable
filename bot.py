@@ -33,12 +33,11 @@ import lightbulb as lb
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from pytz import timezone,utc
-from __init__ import __version__
-
-with open('secrets/token','r',encoding='utf-8') as f:
-    token = f.read().strip()
+from config import Config
     
-bot = lb.BotApp(token = token,
+bot = lb.BotApp(token = Config.TOKEN,
+                owner_ids=Config.OWNER_ID,
+                default_enabled_guilds=Config.GUILD_ID,
                 prefix='-',
                 case_insensitive_prefix_commands=True
                 )
@@ -74,9 +73,9 @@ async def on_stopping(event: hikari.StoppingEvent) -> None:
     scheduler.shutdown()
     log.info('BOT IS DEAD!')
 
-
-bot.run(activity=hikari.Activity(
-            name=f"-help|Version={__version__}",
-            type=hikari.ActivityType.WATCHING,
+def Run():
+    bot.run(activity=hikari.Activity(
+                name=f"-help|Version={Config.VERSION}",
+                type=hikari.ActivityType.WATCHING,
+            )
         )
-    )

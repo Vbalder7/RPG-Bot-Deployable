@@ -29,8 +29,8 @@
 from contextvars import Context
 import lightbulb
 import hikari
+from config import Config
 
-from __init__ import OWNER_ID
 
 plugin = lightbulb.Plugin("Info")
 
@@ -60,7 +60,7 @@ decided to make it Easier."""
         .set_author(name="Information")
         .set_footer(f"Requested by {member.display_name}", icon=member.avatar_url)
         .add_field("Source Code","<https://github.com/Vbalder7/RPG-Bot>")
-        .add_field("Authors",(f"<@{554078653726588930}>"))
+        .add_field("Authors",(f"<@{Config.OWNER_ID}>"))
         .add_field(
             "License",
             '[BSD 3-Clause "New" or "Revised" License]'
