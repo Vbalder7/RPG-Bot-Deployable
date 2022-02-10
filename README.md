@@ -109,12 +109,17 @@ Finished spell lookup command, but only works with srd spells for now.
 
 ## Deployment
 
-To deploy this project run
+To deploy this project Create a .env file in the root directory that should look something like this
 
-Create a folder in the root directory called `secrets`.
-inside there should be a file named `token` with no file extension
-inside place your bot token. if you wish to deploy the bot 24/7 on your own
-I suggest using heroku as the Procfile,requirements.txt, and runtime.txt are provided.
-You need only make a private repository on GitHub add all files to the repository and then build the app with heroku.
-once that is done you can go to the resources tab on the heroku dashboard and refresh the page.
-then turn on the choice that says bot.py
+```py
+TOKEN="Your Token "
+GUILD_ID=123456 # Must be an int
+OWNER_ID=789123 # Must be an int
+VERSION="0.0.0" # Must be a str 
+```
+
+with which ever evironment variables you want to create. Just make sure you define them in your config.py file. Variables must be all caps in .env as well as config.py.
+
+If you want to run this bot 24/7 go to heroku and upload this project to a github repo, then build the app and go to the resources tab and start the __main__.py option
+
+Or you can just [Add to Server](https://discord.com/api/oauth2/authorize?client_id=722335475976634539&permissions=8&scope=bot%20applications.commands)
