@@ -63,10 +63,10 @@ async def cmd_FC(ctx: lightbulb.Context) -> None:
 
     dice = ['+1', '-1', '0', '+1', '-1', '0']
     op1 = ctx.options.op1
-    x = [random.choices(dice, k=4)]
+    x = random.choices(dice, k=4)
     if op1 != '':
         totals = (",".join(f'{i}' for i in x) + op1)
-        await ctx.respond(totals)
+        await ctx.respond(totals, reply=True, mentions_reply=True)
     else:
         totals = (",".join(f'{i}' for i in x))
         await ctx.respond(totals, reply=True, mentions_reply=True)
