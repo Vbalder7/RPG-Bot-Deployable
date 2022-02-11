@@ -41,7 +41,7 @@ def App() -> None:
     bot = lb.BotApp(token=Config.TOKEN,
                     owner_ids=Config.OWNER_ID,
                     default_enabled_guilds=Config.GUILD_ID,
-                    prefix='$',
+                    prefix='-',
                     case_insensitive_prefix_commands=True
                     )
 
@@ -77,7 +77,7 @@ def App() -> None:
         log.info('BOT IS DEAD!')
 
     bot.run(activity=hikari.Activity(
-            name=f"$help|Version={Config.VERSION}",
+            name=f"-help|Version={Config.VERSION}",
             type=hikari.ActivityType.WATCHING,
             )
             )
