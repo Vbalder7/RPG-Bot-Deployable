@@ -39,8 +39,6 @@ from config import Config
 def App() -> None:
 
     bot = lb.BotApp(token=Config.TOKEN,
-                    owner_ids=Config.OWNER_ID,
-                    default_enabled_guilds=Config.GUILD_ID,
                     prefix='-',
                     case_insensitive_prefix_commands=True
                     )
