@@ -53,7 +53,6 @@ async def cmd_roll(ctx: lightbulb.Context) -> None:
 
 @cmd_roll.child
 @lightbulb.add_checks(lightbulb.guild_only)
-@lightbulb.option('advantage', 'rolls with advantage')
 @lightbulb.command('adv', 'rolls with advantage')
 @lightbulb.implements(lightbulb.PrefixSubCommand)
 async def roll_adv(ctx: lightbulb.Context) -> None:
