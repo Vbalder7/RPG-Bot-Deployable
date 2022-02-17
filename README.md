@@ -107,6 +107,10 @@ so you will get a lot of filler text
 
 Finished spell lookup command, but only works with srd spells for now.
 
+## Version (0.1.6)
+
+Added a quality of life feature. So now input -r adv and it will roll with advantage for you.
+
 ## Deployment
 
 To deploy this project Create a .env file in the root directory that should look something like this
