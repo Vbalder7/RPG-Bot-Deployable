@@ -51,6 +51,15 @@ async def cmd_roll(ctx: lightbulb.Context) -> None:
     total = d20.roll(sides)
     await ctx.respond(f'{total}', reply=True, mentions_reply=True)
 
+@cmd_roll.child
+@lightbulb.add_checks(lightbulb.guild_only)
+@lightbulb.command('adv', 'rolls with advantage')
+@lightbulb.implements(lightbulb.PrefixSubCommand)
+async def roll_adv(ctx: lightbulb.Context) -> None:
+    total= d20.roll("2d20kh1")
+    await ctx.respond(f'{total}')
+
+
 # Command for rolling Fate Core dice
 
 
