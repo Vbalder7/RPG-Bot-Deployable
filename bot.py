@@ -39,7 +39,7 @@ from config import Config
 def App() -> None:
 
     bot = lb.BotApp(token=Config.TOKEN,
-                    prefix='+',
+                    prefix='-',
                     case_insensitive_prefix_commands=True
                     )
 
