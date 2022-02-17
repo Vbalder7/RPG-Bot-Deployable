@@ -5,6 +5,20 @@
     <img src="resources/pictures/logo (1).png" alt="Image" width="200" height="200" />
 </p>
 
+<p align="center">
+    <img src="https://img.shields.io/github/license/Vbalder7/RPG-Bot?style=flat-square&color=blue">
+    <img src="https://img.shields.io/github/languages/top/Vbalder7/RPG-Bot?style=flat-square">
+    <img src="https://img.shields.io/github/repo-size/Vbalder7/RPG-Bot?label=RPG-Bot%20Size&style=flat-square">
+    <img src="https://img.shields.io/github/last-commit/Vbalder7/RPG-Bot?color=blue&style=flat-square">
+    <img src="https://img.shields.io/badge/Heroku-430098?style=flat-square&logo=heroku&logoColor=white">
+    <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black">
+    <img src="https://img.shields.io/github/v/release/Vbalder7/Rpg-Bot?style=flat-square">
+    <img src="https://img.shields.io/github/commits-since/Vbalder7/Rpg-Bot/latest?include_prereleases&sort=semver&style=flat-square">
+    <img src="https://img.shields.io/github/release-date/Vbalder7/RPG-Bot?style=flat-square">
+    <img src="https://img.shields.io/pypi/pyversions/hikari?style=flat-square">
+    <img src="https://img.shields.io/github/downloads/Vbalder7/Rpg-Bot/latest/total?style=flat-square">
+</p>
+
 We are dedicated to making a discord bot
 that is used for any TTRPG (Table Top Role Playing Game),
 and since we are all facing these troubling times we might find
