@@ -51,6 +51,7 @@ class AppConfig:
     GUILD_ID: int
     OWNER_ID: int
     VERSION: str
+    PREFIX: str
 
     """
     Map environment variables to class fields according to these rules:
