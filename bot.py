@@ -39,11 +39,8 @@ from config import Config
 def App() -> None:
 
     bot = lb.BotApp(token=Config.TOKEN,
-<<<<<<< Updated upstream
                     prefix='-',
-=======
                     prefix=Config.PREFIX,
->>>>>>> Stashed changes
                     case_insensitive_prefix_commands=True
                     )
 
