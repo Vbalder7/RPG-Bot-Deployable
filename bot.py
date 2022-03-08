@@ -40,7 +40,6 @@ def App() -> None:
 
     bot = lb.BotApp(token=Config.TOKEN,
                     prefix='-',
-                    prefix=Config.PREFIX,
                     case_insensitive_prefix_commands=True
                     )
 
